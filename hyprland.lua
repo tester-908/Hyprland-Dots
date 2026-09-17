@@ -1,19 +1,7 @@
 require("keybinds")
 require("monitors")
 require("animations")
-
--------------------
----- AUTOSTART ----
--------------------
-
--- See https://wiki.hypr.land/configuring/core/autostart/
-
--- Autostart necessary processes (like notifications daemons, status bars, etc.)
--- Or execute your favorite apps at launch like this:
---
-hl.on("hyprland.start", function() 
-   hl.exec_cmd("waybar -c ~/.config/hypr/external/waybar/config -s ~/.config/hypr/external/waybar/style.css & hyprpaper & firefox")
-end)
+require("autostart")
 
 -------------------------------
 ---- ENVIRONMENT VARIABLES ----
@@ -23,25 +11,6 @@ end)
 
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
-
-
------------------------
------ PERMISSIONS -----
------------------------
-
--- See https://wiki.hypr.land/configuring/core/advanced-configuration/permissions/
--- Please note permission changes here require a Hyprland restart and are not applied on-the-fly
--- for security reasons
-
--- hl.config({
---   ecosystem = {
---     enforce_permissions = true,
---   },
--- })
-
--- hl.permission("/usr/(bin|local/bin)/grim", "screencopy", "allow")
--- hl.permission("/usr/(lib|libexec|lib64)/xdg-desktop-portal-hyprland", "screencopy", "allow")
--- hl.permission("/usr/(bin|local/bin)/hyprpm", "plugin", "allow")
 
 
 -- Ref https://wiki.hypr.land/configuring/core/rules/workspace-rules/
