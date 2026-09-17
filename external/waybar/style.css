@@ -14,31 +14,7 @@ window#waybar {
   background: transparent;
 }
 
-#workspaces button {
-  padding: 0 8px;
-  margin: 0 2px;
-  border-radius: 999px;
-  background: transparent;
-  color: #fff;
-  transition: all 0.4s ease-in-out;
-}
-
-#workspaces button.active {
-  padding: 0 15px;
-  transition: all 0.4s ease-in-out;
-  color: #00C8C8;
-  background: rgba(0, 255, 170, 0.1);
-}
-
-#workspaces button.empty {
-  color: #bfbfbf;
-}
-
-#workspaces button:hover {
-  border: #4DB3D3 solid 1px;
-  box-shadow: 0 0;
-  color: #fff;
-}
+#workspaces button { padding: 0 8px; margin: 0 2px; border-radius: 999px; background: transparent; color: #fff; transition: all 0.4s ease-in-out; } #workspaces button.active { padding: 0 15px; border-radius: 999px; color: #00C8C8; background: rgba(0, 255, 170, 0.1); transition: all 0.4s ease-in-out; } #workspaces button.empty { color: #bfbfbf; } #workspaces button:hover { border: #4DB3D3 solid 1px; box-shadow: 0 0; color: #fff; }
 
 #temperature {
   color: #fff;

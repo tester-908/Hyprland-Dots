@@ -19,45 +19,38 @@
     "format": "{title}",
     "max-length": 50
   },
-  "hyprland/workspaces": {
-    "format": "{icon}{windows}",
-    "format-icons": {
-      //"default": "● ",
-      "empty": "●"
-    },
-    "window-rewrite-default": "",
-    "window-rewrite": {
-      "title<.*youtube.*>": " ",
-      "class<chrome|chromium>": " ",
-      "class<opera|opera-mini|opera-developer>": " ",
-      "class<(firefox|firefox-developer-edition|firefox-beta|floorp|librewolf)>": " ",
-      "class<brave>": " ",
-      "class<discord|vesktop|webcord>": " ",
-      "class<steam>": " ",
-      "class<spotify>": " ",
-      "class<supertux.*>": " ",
-      "class<minecraft.*|prismlauncher|atlauncher>": " 󰍳",
-      "title<minecraft.*>": " 󰍳",
-      "title<.*github.*>": " ",
-      "kitty": " ",
-      "title<nvim.*>": " ",
-      "title<vi.*>": " ",
-      "title<.*emacs.*": " ",
-      "code": " 󰨞",
-      "Hyprland Polkit Agent*": " 󰀇"
-    },
-    "on-scroll-down": "hyprctl dispatch workspace r-1",
-    "on-scroll-up": "hyprctl dispatch workspace r+1",
-    "persistent-workspaces": {
-      "*": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ]
-    }
-  },
+
+
+"hyprland/workspaces": {
+  "format": "{id}: {windows}",
+  "on-click": "activate",
+  "on-scroll-down": "hyprctl dispatch workspace r-1",
+  "on-scroll-up": "hyprctl dispatch workspace r+1",
+  "sort-by": "number",
+
+  "window-rewrite-default": "",
+  "window-rewrite": {
+    "title<.*youtube.*>": " ",
+    "class<chrome|chromium>": " ",
+    "class<opera|opera-mini|opera-developer>": " ",
+    "class<(firefox|firefox-developer-edition|firefox-beta|floorp|librewolf)>": " ",
+    "class<brave>": " ",
+    "class<discord|vesktop|webcord>": " ",
+    "class<steam>": " ",
+    "class<spotify>": " ",
+    "class<supertux.*>": " ",
+    "class<minecraft.*|prismlauncher|atlauncher>": " 󰍳",
+    "title<minecraft.*>": " 󰍳",
+    "title<.*github.*>": " ",
+    "kitty": " ",
+    "title<nvim.*>": " ",
+    "title<vi.*>": " ",
+    "title<.*emacs.*": " ",
+    "code": " 󰨞",
+    "Hyprland Polkit Agent*": " 󰀇"
+  }
+},
+
   "temperature": {
     "critical-threshold": 75,
     "format-critical": "{temperatureC}°C ",
